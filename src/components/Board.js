@@ -1,6 +1,13 @@
 import React from 'react';
 
-import Square from './Square';
+function Square(props){
+  return(
+    // no se pone props.onClick(), pues sino la llamaría de inmediato en lugar de pasarla
+    <button className="square" onClick={props.onClick}>
+      {props.value}
+    </button>
+  )
+}
 
 export default class Board extends React.Component{
 
